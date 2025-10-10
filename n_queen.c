@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2018
-** count_valid_queens_placements.c
-** File description:
-** count valid queens placements
-*/
-
 void print_map(int tab[], int n);
 
 void set_tab(int tab[], int i, int j, int n)
