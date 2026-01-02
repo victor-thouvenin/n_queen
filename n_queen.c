@@ -26,7 +26,7 @@ int check_map(int tab[], int i, int j, int n)
     if (j >= n)
         return (0);
     else {
-        if (tab[i * n + j] > -1) {
+        if (tab[i * n + j] == 0) {
             set_tab(tab, i, j, n);
             q += check_map(tab, i + 1, 0, n);
             set_tab(tab, i, j, n);
