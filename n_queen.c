@@ -1,5 +1,3 @@
-void print_map(int tab[], int n);
-
 void set_tab(int tab[], int i, int j, int n)
 {
     int i2 = i;
