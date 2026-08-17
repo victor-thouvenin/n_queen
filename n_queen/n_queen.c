@@ -41,9 +41,6 @@ int count_valid_queens_placements(int n)
     int tab[n*n];
     int i = 0;
 
-    if (n <= 0)
-        return (0);
-    
     while (i < n*n) {
         tab[i++] = 0;
     }
@@ -58,6 +55,9 @@ int main(int ac, char** av)
     if (ac < 2) {
         return 1;
     }
-    printf("%i\n", count_valid_queens_placements(atoi(av[1])));
+    int n = atoi(av[1]);
+    if (n < 1 || n > 100)
+        return 1;
+    printf("%i\n", count_valid_queens_placements(n));
     return 0;
 };
