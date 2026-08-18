@@ -4,14 +4,16 @@ int check_cell(int tab[], int i, int j, int n)
     int c = 1;
     int d1 = 1;
     int d2 = 1;
+    int k = 0;
 
-    for (int k = 0; k < n; k++) {
+    while (k < n) {
         l = l && tab[i*n + k];
         c = c && tab[k*n + j];
         d1 = d1 && (i == j ? tab[k*n + k]&1 : 0);
         d2 = d2 && (i == n-1-j ? tab[k*n + n-1-k]&1 : 0);
         if (!l && !c && !d1 && !d2)
             break;
+        ++k;
     }
     return (l || c || d1 || d2);
 }
